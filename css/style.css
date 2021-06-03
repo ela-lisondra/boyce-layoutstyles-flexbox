@@ -131,6 +131,10 @@ footer {
     padding: 20px;
     justify-content: space-between;
     align-items: center;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    left: 0;
 }
 
 footer p {
@@ -138,18 +142,13 @@ footer p {
     font-size: 18px;
 }
 
-footer nav {
-    /* float: right; */
-
-}
-
 footer nav a {
     width: 22px;
     margin-left: 15px;
     display: inline-block;
 }
-
-/* header,
+/* 
+header,
 header h1 {
     transition:all 0.3s ease;
 } */
@@ -160,7 +159,7 @@ header h1 {
 
 .compact h1 {
     width: 32px;
-} */
+}   */
 
 .list {
     max-width: 640px;
@@ -169,13 +168,52 @@ header h1 {
     font-size: 48px;
     line-height: 1.2;
     margin-top: 120px;
+    
 }
 
 .list a img {
-    /* opacity: fixed; */
+    opacity: 0;
     position: fixed;
     top: 50%;
     left: 50%;
     transform:translate(-50%, -50%);
     max-width: 500px;
+    /* this will tell the browser to ignore any default mouse interactions on this img element */
+    pointer-events: none;
+    transition: opacity 0.3s;
+}
+
+/* pseudo element that allows us to insert content before and after an element */
+.list a:after {
+    content: '/';
+}
+
+.list a:last-child {
+    content: '';
+}
+
+.list a:hover img {
+    opacity: 1;
+}
+
+.biog {
+    text-align: center;
+    max-width: 980px;
+    
+}
+.biog img {
+    width: 500px;
+    filter: grayscale(50%);
+}
+
+@media (max-width: 375px) {
+
+    .list {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    .list a {
+        font-size: 32px;
+    }
 }
