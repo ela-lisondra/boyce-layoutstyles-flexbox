@@ -24,6 +24,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    z-index: 2;
 
 }
 
@@ -40,36 +41,54 @@ header nav {
 header nav a{
     margin-left: 10px;
     font-size: 22px;
+    transition: border 0.3s ease-in;
+    border-bottom: solid 2px rgba(0, 0,0, 0);
+    padding-bottom: 3px;
+}
+
+header nav a:hover {
+    border-color: #555;
 }
 
 /* active link style */
-.selected {
-   border-bottom: solid 2px #fff; 
-   padding-bottom: 3px;
+header nav a.selected {
+   border-color: #fff; 
 }
 
 .photos {
-    /* to align elem in one line */
-    display: flex;
-    /* to tell flexbox that it's ok to put stuff on a new line, wrap items in a new row */
-    /* text-align: center; */
-    flex-wrap: wrap;
-    align-items: end;
-    max-width: 960px;
-    margin-left: auto;
-    margin-right: auto;
-}
+    /*   text-align: center; */
+      max-width: 960px;
+      margin-left: auto;
+      margin-right: auto;
+      padding-left: 10px;
+      padding-right: 10px;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: flex-end;
+      justify-content: center;
+    }
+    
 .photo {
-    /* inline block gives us the best of both inline and block elements allowing us to stack them side by side and also align our elements vertically in the row */
-    /* display: inline-block; */
-    width: 320px;
+        /* inline block gives us a the best of both inline and block
+      elements allowing us to stack them side by side and also 
+      align our elements vertically in the row*/
+    /*   display: inline-block; */
+    width:  300px;
     margin: 10px;
-    /* we can use vertical align to align our rows to bottom/middle/top */
-    /* vertical-align: top; */
-    /* by using position relative on the parent photo elem, our overlay will be positioned in relation to it */
+        /* we can use vertical align to align or rows to bottom/middle/top   */
+        /* vertical-align: top; */
+        /* by using position relative on the parent photo element, our
+      overlay will be positioned in relation to it */
     position: relative;
 }
 
+.photo img {
+    transition: filter 0.3s;
+}
+
+.photo:hover img{
+    filter: grayscale(100%);
+}
 .overlay {
     /* by using absolute position we can position things in relation to the page or other elements */
     position: absolute;
@@ -83,6 +102,7 @@ header nav a{
 
     opacity: 0;
     transition: opacity 0.3s;
+    z-index: 2;
 }
 
 .photo:hover .overlay {
@@ -115,16 +135,47 @@ footer {
 
 footer p {
     /* float: left; */
+    font-size: 18px;
 }
 
 footer nav {
     /* float: right; */
+
 }
 
 footer nav a {
-    width: 16px;
-    margin-left: 5px;
+    width: 22px;
+    margin-left: 15px;
     display: inline-block;
 }
 
+/* header,
+header h1 {
+    transition:all 0.3s ease;
+} */
 
+/* .hidden{
+    transform: translate(-100%);
+}
+
+.compact h1 {
+    width: 32px;
+} */
+
+.list {
+    max-width: 640px;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 48px;
+    line-height: 1.2;
+    margin-top: 120px;
+}
+
+.list a img {
+    /* opacity: fixed; */
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform:translate(-50%, -50%);
+    max-width: 500px;
+}
