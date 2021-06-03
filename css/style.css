@@ -206,14 +206,30 @@ header h1 {
     filter: grayscale(50%);
 }
 
-@media (max-width: 375px) {
+@media (max-width: 600px) {
 
-    .list {
+    .list,
+    .biog {
         padding-left: 15px;
         padding-right: 15px;
     }
 
-    .list a {
+    .list a,
+    .biog p {
         font-size: 32px;
+    }
+} 
+
+@media (max-width: 375px) {
+
+    .list,
+    .biog {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    .list a,
+    .biog p {
+        font-size: 24px;
     }
 }
