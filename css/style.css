@@ -186,7 +186,7 @@ header h1 {
     max-width: 500px;
     /* this will tell the browser to ignore any default mouse interactions on this img element */
     pointer-events: none;
-    transition: opacity 0.3s;
+    transition: opacity 0.5s;
 }
 
 /* pseudo element that allows us to insert content before and after an element */
@@ -243,6 +243,16 @@ header h1 {
     header nav a {
         font-size: 18px;
     }
+
+    .photo h2 {
+        font-size: 22px;
+    }
+    
+    .list {
+        font-size: unset;
+        line-height: 1.5;
+    }
+
     .list,
     .biog {
         padding-left: 15px;
@@ -250,7 +260,7 @@ header h1 {
     }
 
     .biog p {
-        padding: 10px 10px 100px 10px;
+        padding: 10px 10px 80px 10px;
     }
 
     .list a,
@@ -260,7 +270,7 @@ header h1 {
     }
 
     footer {
-        padding-left: none; 
+        padding: 0; 
     }
 
     footer p{
@@ -274,5 +284,6 @@ header h1 {
     footer nav a {
         width: 18px;
         margin-left: 20px;
+        margin-right: 0;
     }
 }
