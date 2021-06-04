@@ -6,6 +6,7 @@ body {
     background-color: #000;
     /* we add some padding top to create the space for our fixed header to sit inside of */
     padding-top: 104px;
+    box-sizing: border-box;
 }
 
 a {
@@ -31,11 +32,13 @@ header {
 header h1 {
     /* float: left; */
     width: 64px;
+    margin-left: 20px;
 }
 
 header nav {
     /* float: right; */
     /* margin-top: 20px; */
+    margin-right: 40px;
 }
 
 header nav a{
@@ -84,6 +87,7 @@ header nav a.selected {
 
 .photo img {
     transition: filter 0.3s;
+    width: 100%;
 }
 
 .photo:hover img{
@@ -135,6 +139,7 @@ footer {
     position: fixed;
     bottom: 0;
     left: 0;
+    margin-left: 20px;
 }
 
 footer p {
@@ -144,8 +149,9 @@ footer p {
 
 footer nav a {
     width: 22px;
-    margin-left: 15px;
+    margin-left: 10px;
     display: inline-block;
+    margin-right: 40px;
 }
 /* 
 header,
@@ -206,6 +212,10 @@ header h1 {
     filter: grayscale(50%);
 }
 
+.biog p {
+    padding: 100px;
+}
+
 @media (max-width: 600px) {
 
     .list,
@@ -228,8 +238,13 @@ header h1 {
         padding-right: 15px;
     }
 
+    .biog p {
+        padding: 30px;
+    }
+
     .list a,
     .biog p {
         font-size: 24px;
+        
     }
 }
