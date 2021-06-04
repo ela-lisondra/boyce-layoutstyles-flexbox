@@ -231,7 +231,18 @@ header h1 {
 } 
 
 @media (max-width: 375px) {
+    header h1 {
+        width: 48px;
+        margin-left: 0;
+    }
 
+    header nav {
+        margin-right: 0;
+    }
+
+    header nav a {
+        font-size: 18px;
+    }
     .list,
     .biog {
         padding-left: 15px;
@@ -239,12 +250,29 @@ header h1 {
     }
 
     .biog p {
-        padding: 30px;
+        padding: 10px 10px 100px 10px;
     }
 
     .list a,
     .biog p {
-        font-size: 24px;
+        font-size: 22px;
         
+    }
+
+    footer {
+        padding-left: none; 
+    }
+
+    footer p{
+        font-size: 16px;
+    }
+
+    footer nav {
+        margin-right: 40px;
+    }
+
+    footer nav a {
+        width: 18px;
+        margin-left: 20px;
     }
 }
