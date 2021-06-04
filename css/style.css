@@ -247,10 +247,11 @@ header h1 {
     .photo h2 {
         font-size: 22px;
     }
-    
+
     .list {
         font-size: unset;
         line-height: 1.5;
+        margin-top: 30px;
     }
 
     .list,
